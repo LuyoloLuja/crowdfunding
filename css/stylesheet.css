@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Commissioner', sans-serif;
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 60vh;
+    background-image: url(../images/image-hero-desktop.jpg);
+    padding: 3em 5em;
+}
+
+header ul {
+    display: flex;
+    justify-content: flex-end;
+}
+header ul :nth-child(1){ margin-right: auto; }
+header ul :nth-child(2){ padding-left: 2em; }
+header ul :nth-child(3){ padding-left: 2em; }
+header ul :nth-child(4){ padding-left: 2em; }
+header ul li {
+    list-style-type: none;
+}
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    width: 55%;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: #fff;
+    /* padding: 5em; */
+    margin: 0 auto;
+    position: absolute;
+    top: 50vh;
+    left: 22.5%;
+    right: 22.5%;
+}
+.container .mastercraftImg {
+    position: relative;
+    display: block;
+    width: fit-content;
+    /* border: 1px solid blue; */
+    margin: 0 auto;
+    top: -2em;
+}
+.container > div, .container .about > div {
+    width: 90%;
+    border: 1px solid red;
+    margin: 0 auto 5em auto;
+}
+
+.main .heading,
+.main p  {
+    text-align: center;
+    margin: 0.5em 0;
+}
+.heading { font-size: 28px; }
+.main p { color: hsl(0, 2%, 37%); }
+.about p {
+    color: hsl(0, 2%, 37%);
+    margin: 2em 0;
+}
+.main .bookmarkButtons {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0 4em 0;
+}
+.main .bookmarkButtons img { width: 45px; height: 45px; }
+.main .bookmarkButtons button {
+    padding: 10px 40px;
+    font-weight: bold;
+    border-radius: 50px;
+    color: #fff;
+    background-color: hsl(176, 50%, 47%);
+    border: none;
+    font-size: 14px;
+}
+.main .bookmarkButtons a {
+    color: hsl(0, 0%, 48%);
+    background-color:#F5F5F5;
+    text-decoration: none;
+    border-radius: 50px;
+}
+.main .bookmarkButtons a span {
+    width: fit-content;
+    display: inline-block;
+    margin: 0 1em;
+    font-weight: bold;
+}
+.main .statistics {
+    display: flex;
+    justify-content: space-between;
+}
+.main .statistics span { color: hsl(0, 2%, 37%); }

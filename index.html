@@ -7,6 +7,12 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/stylesheet.css">
 
   <title>Frontend Mentor | Crowdfunding product page</title>
@@ -14,9 +20,8 @@
 
 <body>
   <header>
-    <h1><a href="#"><img src="./images/logo.svg" alt=""></a></h1>
-
     <ul>
+      <li><a href="#"><img src="./images/logo.svg" alt=""></a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Discover</a></li>
       <li><a href="#">Get Started</a></li>
@@ -24,31 +29,33 @@
   </header>
 
   <section class="container">
+
     <!-- first section -->
-    <img src="./images/logo-mastercraft.svg" alt="">
+    <img class="mastercraftImg" src="./images/logo-mastercraft.svg" alt="">
+
     <div class="main">
-      <h1>Mastercraft Bamboo Monitor Riser</h1>
-      <h3>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</h3>
+      <h1 class="heading">Mastercraft Bamboo Monitor Riser</h1>
+      <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
 
       <div class="bookmarkButtons">
         <button type="submit">Back this project</button>
-        <a href="#"><img src="./images/icon-bookmark.svg" alt="Bookmark">Bookmark</a>
+        <a href="#"><img src="./images/icon-bookmark.svg" alt="Bookmark"><span>Bookmark</span></a>
       </div>
 
       <div class="statistics">
         <div class="backed">
           <h1>$89,914</h1>
-          <h4>of $100,000 backed</h4>
+          <span>of $100,000 backed</span>
         </div>
 
         <div class="backers">
           <h1>5,007</h1>
-          <h4>total backers</h4>
+          <span>total backers</span>
         </div>
 
         <div class="days-left">
           <h1>56</h1>
-          <h4>days left</h4>
+          <span>days left</span>
         </div>
       </div>
 
@@ -57,7 +64,7 @@
 
     <!-- second section -- about -->
     <div class="about">
-      <h2>About this project</h2>
+      <h3>About this project</h3>
 
       <p>
         The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
@@ -68,64 +75,66 @@
         Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer
         to allow notepads, pens, and USB sticks to be stored under the stand.
       </p>
-    </div>
 
-    <!-- third section -- bamboo stand -->
-    <div class="bamboo-stand">
-      <h2>Bamboo Stand</h2>
-      <span>Pledge $25 or more</span>
+      <!-- third section -- bamboo stand -->
+      <div class="bamboo-stand">
+        <h3>Bamboo Stand</h3>
+        <span>Pledge $25 or more</span>
 
-      <p>
-        You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-        you’ll be added to a special Backer member list.
-      </p>
+        <p>
+          You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+          you’ll be added to a special Backer member list.
+        </p>
 
-      <div class="days-left">
-        <div>
-          <h1>101</h1>
-          <span>left</span>
+        <div class="days-left">
+          <div>
+            <h1>101</h1>
+            <span>left</span>
+          </div>
+          <button>Select Reward</button>
         </div>
-        <button>Select Reward</button>
+      </div>
+
+      <!-- fourth section -- Black Edition Stand -->
+      <div class="black-edition-stand">
+        <h3>Black Edition Stand</h3>
+        <span>Pledge $75 or more</span>
+
+        <p>
+          You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+          member list. Shipping is included.
+        </p>
+
+        <div class="days-left">
+          <div>
+            <h1>64</h1>
+            <span>left</span>
+          </div>
+          <button>Select Reward</button>
+        </div>
+      </div>
+
+      <!-- fifth section --- mahagony special edition -->
+      <div class="mahagony-edition">
+        <h3>Mahogany Special Edition</h3>
+        <span>Pledge $200 or more</span>
+
+        <p>
+          You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+          to our Backer member list. Shipping is included.
+        </p>
+
+        <div class="days-left">
+          <div>
+            <h1>0</h1>
+            <span>left</span>
+          </div>
+          <button>Out of Stock</button>
+        </div>
       </div>
     </div>
 
-    <!-- fourth section -- Black Edition Stand -->
-    <div class="black-edition-stand">
-      <h2>Black Edition Stand</h2>
-      <span>Pledge $75 or more</span>
 
-      <p>
-        You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-        member list. Shipping is included.
-      </p>
-
-      <div class="days-left">
-        <div>
-          <h1>64</h1>
-          <span>left</span>
-        </div>
-        <button>Select Reward</button>
-      </div>
-    </div>
-
-    <!-- fifth section --- mahagony special edition -->
-    <div class="mahagony-edition">
-      <h2>Mahogany Special Edition</h2>
-      <span>Pledge $200 or more</span>
-
-      <p>
-        You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-        to our Backer member list. Shipping is included.
-      </p>
-
-      <div class="days-left">
-        <div>
-          <h1>0</h1>
-          <span>left</span>
-        </div>
-        <button>Out of Stock</button>
-      </div>
-    </div>
   </section>
 
 
