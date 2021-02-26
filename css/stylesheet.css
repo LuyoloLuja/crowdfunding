@@ -34,12 +34,12 @@ header ul li a {
     text-decoration: none;
     color: #fff;
 }
+buttton:active { background-color: hsl(176, 72%, 28%); }
 
 .container {
     background-color: #F0FFF0;
     width: 55%;
     border-radius: 10px;
-    /* padding: 5em; */
     margin: 0 auto;
     position: absolute;
     top: 50vh;
@@ -50,13 +50,11 @@ header ul li a {
     position: relative;
     display: block;
     width: fit-content;
-    /* border: 1px solid blue; */
     margin: 0 auto;
     top: -2em;
 }
 .container > div {
     width: 90%;
-    /* border: 1px solid red; */
     margin: 0 auto 5em auto;
 }
 
@@ -81,6 +79,8 @@ header ul li a {
     background-color: hsl(176, 50%, 47%);
     border: none;
     font-size: 14px;
+    outline: none;
+    cursor: pointer;
 }
 .main .bookmarkButtons a {
     color: hsl(0, 0%, 48%);
@@ -143,6 +143,8 @@ header ul li a {
     padding: 1em;
     font-weight: bold;
     border-radius: 30px;
+    outline: none;
+    cursor: pointer;
 }
 .about .mahagony-edition {
     opacity: 0.7;
@@ -152,4 +154,89 @@ header ul li a {
 }
 .about .mahagony-edition button {
     background-color: hsl(0, 2%, 45%);
+}
+.bg-modal {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 50%);
+}
+.bg-modal .modal {
+    background-color: #fff;
+    width: 55%;
+    margin: 10em auto;
+    padding: 4em;
+    border-radius: 10px;
+}
+.close-btn span {
+    font-size: 24px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+.modal h1 {
+    clear: both;
+    font-size: 24px;
+}
+.modal p { color: hsl(0, 2%, 37%); margin: 1em 0; }
+.modal h2 { font-size: 18px; }
+.modal > div {
+    position: relative;
+    border: 1px solid hsl(0, 5%, 80%);
+    border-radius: 10px;
+    padding: 2em 3em;
+    margin: 2em 0;
+}
+.modal .active {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: hsl(176, 50%, 47%);
+    position: absolute;
+    left: 1em;
+}
+.modal .pledge > div {
+    display: flex;
+    justify-content: flex-end;
+}
+.modal .pledge > div a {
+    color: hsl(176, 50%, 47%);
+    text-decoration: none;
+}
+.modal .pledge-amount {
+    display: flex;
+    justify-content: flex-end;
+}
+.modal .pledge-amount :nth-child(1){
+    margin-right: auto;
+}
+.modal .pledge-amount button,
+.modal .pledge-amount input {
+    width: 35%;
+    padding: 1em;
+    margin: 0 0 0 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+}
+.modal .pledge-amount button { background-color: hsl(176, 50%, 47%); color: #fff; }
+.modal .pledge-amount input { border: 1.5px solid hsl(176, 50%, 47%); color: #000; }
+.modal .pledge > div h2 { display: inline-block; }
+.modal .pledge > div div { display: inline-block; }
+
+.modal .pledge > div :nth-child(1){ margin-right: auto; }
+.modal .pledge > div :nth-child(2){ padding-left: auto; }
+.modal .pledge > div :nth-child(3){ padding-left: 2em; }
+.modal .pledge > div :nth-child(4){ padding-left: 2em; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  opacity: 1;
+}
+.modal .last-child {
+    opacity: 0.6;
 }
