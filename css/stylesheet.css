@@ -36,10 +36,9 @@ header ul li a {
 }
 
 .container {
+    background-color: #F0FFF0;
     width: 55%;
-    border: 1px solid red;
     border-radius: 10px;
-    background-color: #fff;
     /* padding: 5em; */
     margin: 0 auto;
     position: absolute;
@@ -55,9 +54,9 @@ header ul li a {
     margin: 0 auto;
     top: -2em;
 }
-.container > div, .container .about > div {
+.container > div {
     width: 90%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0 auto 5em auto;
 }
 
@@ -68,10 +67,6 @@ header ul li a {
 }
 .heading { font-size: 28px; }
 .main p { color: hsl(0, 2%, 37%); }
-.about p {
-    color: hsl(0, 2%, 37%);
-    margin: 2em 0;
-}
 .main .bookmarkButtons {
     display: flex;
     justify-content: space-between;
@@ -104,3 +99,57 @@ header ul li a {
     justify-content: space-between;
 }
 .main .statistics span { color: hsl(0, 2%, 37%); }
+.main .progress-bar {
+    width: 100%;
+    background-color: hsl(0, 9%, 86%);
+    margin: 2em auto;
+    border-radius: 5px;
+    position: relative;
+}
+.main .progress-bar .progress-value {
+    width: 60%;
+    padding: 5px;
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 5px;
+}
+.about p {
+    color: hsl(0, 2%, 37%);
+    margin: 2em 0;
+}
+.about > div{
+    width: 100%;
+    border: 1px solid hsl(0, 5%, 80%);
+    border-radius: 10px;
+    margin: 2em 0;
+    padding: 2em;
+}
+.about > div a {
+    color: hsl(176, 50%, 47%);
+    text-decoration: none;
+    /* font-weight: bolder; */
+}
+.about .stand-layout {
+    display: flex;
+    justify-content: space-between;
+}
+.about .stand-layout > div { display: flex; }
+.about .stand-layout > div span { margin: 0.2em 1em; }
+.about .stand-layout > div h1 { font-size: 36px; }
+.about .stand-layout > button {
+    background-color: hsl(176, 50%, 47%);
+    width: 30%;
+    color: #fff;
+    border: none;
+    padding: 1em;
+    font-weight: bold;
+    border-radius: 30px;
+}
+.about .mahagony-edition {
+    opacity: 0.7;
+}
+.about .mahagony-edition h3, .about .mahagony-edition h1 {
+    color: hsl(0, 2%, 49%);
+}
+.about .mahagony-edition button {
+    background-color: hsl(0, 2%, 45%);
+}
