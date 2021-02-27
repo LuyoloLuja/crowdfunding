@@ -38,13 +38,13 @@
       <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
 
       <div class="bookmarkButtons">
-        <button type="submit">Back this project</button>
+        <button type="submit" class="make-pledge">Back this project</button>
         <a href="#"><img src="./images/icon-bookmark.svg" alt="Bookmark"><span>Bookmark</span></a>
       </div>
 
       <div class="statistics">
         <div class="backed">
-          <h1>$89,914</h1>
+          <h1 class="backed-users">$89,914</h1>
           <span>of $100,000 backed</span>
         </div>
 
@@ -95,7 +95,7 @@
             <h1>101</h1>
             <span>left</span>
           </div>
-          <button>Select Reward</button>
+          <button class="bamboo-edition-btn">Select Reward</button>
         </div>
       </div>
 
@@ -157,9 +157,9 @@
         Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
       </p>
 
-      <div>
+      <div class=".pledge-edition">
         <div class="pledge">
-          <section class="active"></section>
+          <section class="pledgeOne"></section>
           <div>
             <h2>Pledge with no reward</h2>
           </div>
@@ -170,9 +170,9 @@
         </div>
       </div>
 
-      <div>
+      <div class=".pledge-edition">
         <div class="pledge">
-          <section class="active"></section>
+          <section class="pledgeTwo"></section>
           <div>
             <h2>Bamboo Stand</h2>
             <a href="#">Pledge $25 or more</a>
@@ -191,15 +191,15 @@
         <div class="pledge-amount">
           <p>Enter your pledge</p>
           <div>
-            <input placeholder="$25" min="25" type="number">
-            <button>Continue</button>
+            <input class="bambooInputElement" placeholder="$25" min="25" type="number">
+            <button class="bambooBtnElement">Continue</button>
           </div>
         </div>
       </div>
 
-      <div>
+      <div class=".pledge-edition">
         <div class="pledge">
-          <section class="active"></section>
+          <section class="pledgeThree"></section>
           <div>
             <h2>Black Edition Stand</h2>
             <a href="#">Pledge $75 or more</a>
@@ -224,9 +224,9 @@
         </div>
       </div>
 
-      <div class="last-child">
+      <div class=".pledge-edition last-child">
         <div class="pledge">
-          <section class="active"></section>
+          <section class="pledgeThree"></section>
           <div>
             <h2>Mahogany Special Edition</h2>
             <a href="#">Pledge $200 or more</a>
@@ -253,12 +253,20 @@
     </div>
   </div>
 
-  <!-- Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it! -->
+  <div class="pledge-successful">
+    <div class="success-message">
+      <img src="./images/icon-check.svg" alt="">
+      <h2>Thanks for your support!</h2>
+      <p>
+        Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+        an email once our campaign is completed.
+      </p>
 
-  <!-- Success modal end -->
+      <button>Got it!</button>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
