@@ -66,4 +66,25 @@
         width: unset;
         margin: 1em 0;
     }
+
+    .bg-modal .modal {
+        width: 90%;
+        padding: 1.5em;
+        margin: 8em auto;
+    }
+    .modal > div {
+        padding: 1em 2em;
+        margin: 1em 0;
+    }
+    .modal .pledge > div,
+    .modal .pledge-amount,
+    .modal .pledge > div a { display: block; }
+    .modal .pledge > div :nth-child(1){ margin: 2px 0; }
+    .modal .pledge > div :nth-child(2){ padding: 2px 0; }
+    .modal .pledge > div :nth-child(3){ padding: 2px 0; }
+    .modal .pledge > div :nth-child(4){ padding: 2px 0; }
+
+    .success-message {
+        width: 90%;
+    }
 }
