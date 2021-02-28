@@ -10,6 +10,7 @@ body {
     font-size: 16px;
     font-weight: normal;
     font-family: 'Commissioner', sans-serif;
+    scroll-behavior: smooth;
 }
 header {
     position: fixed;
