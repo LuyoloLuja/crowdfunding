@@ -1,0 +1,69 @@
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    header {
+        background-image: url(../images/image-hero-mobile.jpg);
+        padding: 4em 2em;
+        height: 45vh;
+    }
+    header .flex-mobile {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        width: 100%;
+    }
+    header .burger {
+        color: white;
+        padding: 5px;
+    }
+    header .display-none { display: none; }
+    header ul {
+        display: block;
+        width: 90%;
+        height: 70%;
+        background-color: #fff;
+        border-radius: 10px;
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        top: 7em;
+        padding: 5%;
+    }
+    header ul li {
+        padding: 5%;
+    }
+    header ul li a {
+        color: #000;
+        font-size: 24px;
+    }
+    .container {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        top: 35vh;
+    }
+    .main .bookmarkButtons {
+        padding: auto;
+        justify-content: center;
+    }
+    .main .bookmarkButtons a span { display:none; }
+    .main .bookmarkButtons button {
+        padding:5px 15px;
+        margin: 0 0.5em;
+    }
+    .main .statistics {
+        display: block;
+    }
+    .main .statistics > div {
+        width: fit-content;
+        margin: 5em auto 2em auto;
+        text-align: center;
+    }
+    .main .statistics div > h1 { font-size: 36px; }
+    .about .stand-layout { display:inline-block }
+    .about .stand-layout > button {
+        width: unset;
+        margin: 1em 0;
+    }
+}
