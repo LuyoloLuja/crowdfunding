@@ -11,8 +11,27 @@ const bambooBtnElement = document.querySelector('.bambooBtnElement');
 
 const backedUsers = document.querySelector('.backed-users');
 const activeStatus = document.querySelectorAll('.active');
-
 const successElement = document.querySelector('.success-message');
+
+const navButton = document.querySelector('.burger');
+const mobileNav = document.querySelector('.display-none');
+const closeNav = document.querySelector('.closeNav');
+
+navButton.addEventListener('click', () => { 
+    mobileNav.style.display = 'block';
+    navButton.style.display = 'none';
+    closeNav.style.display = 'block';
+})
+closeNav.addEventListener('click', () => { 
+    closeNav.style.display = 'none';
+    mobileNav.style.display = 'none';
+    navButton.style.display = 'block'
+})
+// window.addEventListener('click', (clicking) => {
+//     if (clicking.target === modalBackground) {
+//         modalBackground.style.display = 'none';
+//     }
+// })
 
 closeModal.addEventListener('click', () => {
     modalBackground.style.display = 'none';

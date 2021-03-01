@@ -13,10 +13,11 @@
         position: relative;
         width: 100%;
     }
-    header .burger {
+    header .burger, header .closeNav {
         color: white;
-        padding: 5px;
+        padding: 8px;
     }
+    header .closeNav { display: none }
     header .display-none { display: none; }
     header ul {
         display: block;
