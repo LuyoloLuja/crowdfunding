@@ -1,4 +1,3 @@
-// first button
 const makePledgeBtn = document.querySelector('.make-pledge');
 const modalBackground = document.querySelector('.bg-modal');
 const closeModal = document.querySelector('.close-btn');
