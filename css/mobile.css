@@ -13,6 +13,7 @@
         position: relative;
         width: 100%;
     }
+    header .flex-mobile :nth-child(2) { display: block; }
     header .burger, header .closeNav {
         color: white;
         padding: 8px;

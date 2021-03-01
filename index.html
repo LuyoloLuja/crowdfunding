@@ -55,12 +55,12 @@
 
       <div class="statistics">
         <div class="backed">
-          <h1 class="backed-users">$89,914</h1>
+          <h1 class="backed-users">0</h1>
           <span>of $100,000 backed</span>
         </div>
 
         <div class="backers">
-          <h1>5,007</h1>
+          <h1 class="number-of-backers">0</h1>
           <span>total backers</span>
         </div>
 
@@ -127,7 +127,7 @@
             <h1>64</h1>
             <span>left</span>
           </div>
-          <button>Select Reward</button>
+          <button class="black-edition-btn">Select Reward</button>
         </div>
       </div>
 
@@ -181,42 +181,44 @@
         </div>
       </div>
 
-      <div class=".pledge-edition">
-        <div class="pledge">
-          <section class="pledgeTwo"></section>
-          <div>
-            <h2>Bamboo Stand</h2>
-            <a href="#">Pledge $25 or more</a>
+      <div id="wrapper">
+        <div class=".pledge-edition">
+          <div class="pledge">
+            <section class="pledgeTwo"></section>
             <div>
-              <h2>101</h2>
-              <div>left</div>
+              <h2>Bamboo Stand</h2>
+              <a href="#">Pledge $25 or more</a>
+              <div>
+                <h2>101</h2>
+                <div>left</div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+            you’ll be added to a special Backer member list.
+          </p>
+
+          <div class="pledge-amount">
+            <p>Enter your pledge</p>
+            <div>
+              <input class="inputElement bambooInputElement" data-input="1" placeholder="$25" min="25" type="number">
+              <button class="submitBtn bambooBtn" data-input="1">Continue</button>
             </div>
           </div>
         </div>
 
-        <p>
-          You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-          you’ll be added to a special Backer member list.
-        </p>
-
-        <div class="pledge-amount">
-          <p>Enter your pledge</p>
-          <div>
-            <input class="bambooInputElement" placeholder="$25" min="25" type="number">
-            <button class="bambooBtnElement">Continue</button>
-          </div>
-        </div>
-      </div>
-
-      <div class=".pledge-edition">
-        <div class="pledge">
-          <section class="pledgeThree"></section>
-          <div>
-            <h2>Black Edition Stand</h2>
-            <a href="#">Pledge $75 or more</a>
+        <div class=".pledge-edition">
+          <div class="pledge">
+            <section class="pledgeThree"></section>
             <div>
-              <h2>64</h2>
-              <div>left</div>
+              <h2>Black Edition Stand</h2>
+              <a href="#">Pledge $75 or more</a>
+              <div>
+                <h2>64</h2>
+                <div>left</div>
+              </div>
             </div>
           </div>
         </div>
@@ -229,13 +231,13 @@
         <div class="pledge-amount">
           <p>Enter your pledge</p>
           <div>
-            <input placeholder="$75" min="75" type="number">
-            <button>Continue</button>
+            <input class="inputElement blackEditionElement" data-input="2" placeholder="$75" min="75" type="number">
+            <button class="submitBtn blackEditionBtn" data-input="2">Continue</button>
           </div>
         </div>
       </div>
 
-      <div class=".pledge-edition last-child">
+      <div class="pledge-edition last-child">
         <div class="pledge">
           <section class="pledgeThree"></section>
           <div>
@@ -266,6 +268,9 @@
 
   <div class="pledge-successful">
     <div class="success-message">
+      <section class="closeSuccessBtn">
+        <span class="close close-btn-two">&times;</span>
+      </section>
       <img src="./images/icon-check.svg" alt="">
       <h2>Thanks for your support!</h2>
       <p>

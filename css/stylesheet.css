@@ -33,6 +33,8 @@ header ul li a {
     text-decoration: none;
     color: #fff;
 }
+header .flex-mobile :nth-child(2) { display: none; }
+header .flex-mobile :nth-child(3) { display: none; }
 buttton:active { background-color: hsl(176, 72%, 28%); }
 
 .container {
