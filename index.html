@@ -93,7 +93,7 @@
       <div class="bamboo-stand">
         <div class="stand-layout">
           <h3>Bamboo Stand</h3>
-          <a href="#">Pledge $25 or more</a>
+          <a class="make-pledge" href="#">Pledge $25 or more</a>
         </div>
 
         <p>
@@ -106,7 +106,7 @@
             <h1>101</h1>
             <span>left</span>
           </div>
-          <button class="bamboo-edition-btn">Select Reward</button>
+          <button class="make-pledge">Select Reward</button>
         </div>
       </div>
 
@@ -114,7 +114,7 @@
       <div class="black-edition-stand">
         <div class="stand-layout">
           <h3>Black Edition Stand</h3>
-          <a href="#">Pledge $75 or more</a>
+          <a href="#" class="make-pledge">Pledge $75 or more</a>
         </div>
 
         <p>
@@ -127,7 +127,7 @@
             <h1>64</h1>
             <span>left</span>
           </div>
-          <button class="black-edition-btn">Select Reward</button>
+          <button class="black-edition-btn make-pledge">Select Reward</button>
         </div>
       </div>
 
@@ -135,7 +135,7 @@
       <div class="mahagony-edition">
         <div class="stand-layout">
           <h3>Mahogany Special Edition</h3>
-          <a href="#">Pledge $200 or more</a>
+          <a href="#" class="make-pledge">Pledge $200 or more</a>
         </div>
 
         <p>
@@ -155,11 +155,10 @@
 
   </section>
 
-
   <!-- pledge pop-up  -->
   <div class="bg-modal">
     <div class="modal">
-      <section class="close-btn">
+      <section>
         <span class="close">&times;</span>
       </section>
 
@@ -203,8 +202,8 @@
           <div class="pledge-amount">
             <p>Enter your pledge</p>
             <div>
-              <input class="inputElement bambooInputElement" data-input="1" placeholder="$25" min="25" type="number">
-              <button class="submitBtn bambooBtn" data-input="1">Continue</button>
+              <input class="inputElement" data-input="1" placeholder="$25" min="25" type="number">
+              <button class="submitBtn" data-input="1">Continue</button>
             </div>
           </div>
         </div>
@@ -231,8 +230,8 @@
         <div class="pledge-amount">
           <p>Enter your pledge</p>
           <div>
-            <input class="inputElement blackEditionElement" data-input="2" placeholder="$75" min="75" type="number">
-            <button class="submitBtn blackEditionBtn" data-input="2">Continue</button>
+            <input class="inputElement" data-input="2" placeholder="$75" min="75" type="number">
+            <button class="submitBtn" data-input="2">Continue</button>
           </div>
         </div>
       </div>
@@ -268,8 +267,8 @@
 
   <div class="pledge-successful">
     <div class="success-message">
-      <section class="closeSuccessBtn">
-        <span class="close close-btn-two">&times;</span>
+      <section>
+        <span class="close close-btn-two ">&times;</span>
       </section>
       <img src="./images/icon-check.svg" alt="">
       <h2>Thanks for your support!</h2>
