@@ -10,6 +10,8 @@ const openNav = document.querySelector('.burger');
 const closeNav = document.querySelector('.closeNav');
 const displayNav = document.querySelector('.display-none');
 
+const countDownElement = document.querySelector('.count-down');
+
 openNav.addEventListener('click', () => { 
     displayNav.style.display = 'block';
     openNav.style.display = 'none';
@@ -32,9 +34,9 @@ window.addEventListener('click', (clicking) => {
     }
 })
 
-wrapper.addEventListener('click', calculateBamboo);
+wrapper.addEventListener('click', calculateDonations);
 let donationsMade = [];
-function calculateBamboo(event) {
+function calculateDonations(event) {
 
     const el = event.target;
     if (el.nodeName !== 'BUTTON' || !el.classList.contains('submitBtn')) {
@@ -54,6 +56,24 @@ function calculateBamboo(event) {
     return donationsTotal;
 }
 
+countDownFunction()
+function countDownFunction() {
+    const countDownDate = new Date("May 31, 2021 00:00:00");
+
+    // updat countdown every second 
+    const updateTime = setInterval(() => {
+        const start = new Date().getTime();
+        const distance = countDownDate - start;
+        const daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
+        
+        countDownElement.textContent = daysLeft;
+
+        if (distance < 0) {
+            clearInterval(updateTime);
+            countDownElement.textContent = "CLOSED";
+        }
+    }, 1000);
+}
 // function selectedEdition() {
 //     modalBackground.style.display = 'block';
     // const activeStatus = document.querySelectorAll('.active');
