@@ -12,7 +12,7 @@ const closeNav = document.querySelector('.closeNav');
 const displayNav = document.querySelector('.display-none');
 
 const successElement = document.querySelector('.pledge-successful');
-const closeSuccess = document.querySelector('.closeSuccess');
+const closeSuccess = document.querySelectorAll('.close');
 
 openNav.addEventListener('click', () => { 
     displayNav.style.display = 'block';
@@ -57,13 +57,14 @@ let donationsMade = [];
 function calculateDonations(event) {
 
     const el = event.target;
+    
     if (el.nodeName !== 'BUTTON' || !el.classList.contains('submitBtn')) {
         return;
     }
+
     const targetInput = el.dataset.input;
 
-    // find out why factory function isnt working
-    subtractItemsLeft(targetInput);
+    // console.log(targetInput);
 
     const inputElement = document.querySelector(`input[data-input="${targetInput}"]`);
     const inputValue = parseFloat(inputElement.value) || 0;
@@ -75,6 +76,8 @@ function calculateDonations(event) {
     pledgedAmount.textContent = `$${donationsTotal}`;
     peopleDonated.textContent = donationsMade.length;
     successModal();
+    // find out why factory function isnt working
+    subtractItemsLeft(targetInput);
 
     return donationsTotal;
 }
@@ -100,28 +103,6 @@ function countDownFunction() {
 function successModal() {
     successElement.style.display = 'block';
 }
-closeSuccess.addEventListener('click', () => {
+closeSuccess.forEach(button => button.addEventListener('click', () => {
     successElement.style.display = 'none';
-});
-
-
-
-
-
-// function selectedEdition() {
-//     modalBackground.style.display = 'block';
-    // const activeStatus = document.querySelectorAll('.active');
-    // bambooActiveStatus.classList.add('active');
-
-    // const bambooEdition = document.querySelector('.bamboo-stand');
-    // const bambooActiveStatus = document.querySelector('.pledgeTwo');
-    // bambooEdition.classList.add('.selected-edition-style');
-    // bambooEdition.forEach(edition => {
-    //     edition.classList.add('.selected-edition-style');
-
-    //     activeStatus.forEach(status => {
-    //         status.style.display = 'block';
-    //     })
-    // });
-
-// }
+}))
