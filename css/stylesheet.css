@@ -264,7 +264,14 @@ input::-webkit-inner-spin-button {
     border-radius: 15px;
     margin: 4em auto;
 }
+.closeSuccess {
+    font-size: 24px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
 .success-message img {
+    clear: both;
     display: block;
     margin: 1em auto;
 }

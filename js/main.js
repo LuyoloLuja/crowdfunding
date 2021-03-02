@@ -1,16 +1,18 @@
-const makePledgeBtnElement = document.querySelectorAll('.make-pledge');
-const modalBackground = document.querySelector('.bg-modal');
-const closeModal = document.querySelector('.close');
-
 const wrapper = document.getElementById('wrapper');
 const peopleDonated = document.querySelector('.number-of-backers');
 const pledgedAmount = document.querySelector('.backed-users');
+const countDownElement = document.querySelector('.count-down');
+
+const makePledgeBtnElement = document.querySelectorAll('.make-pledge');
+const modalBackground = document.querySelector('.bg-modal');
+const closeModal = document.querySelector('.close');
 
 const openNav = document.querySelector('.burger');
 const closeNav = document.querySelector('.closeNav');
 const displayNav = document.querySelector('.display-none');
 
-const countDownElement = document.querySelector('.count-down');
+const successElement = document.querySelector('.pledge-successful');
+const closeSuccess = document.querySelector('.closeSuccess');
 
 openNav.addEventListener('click', () => { 
     displayNav.style.display = 'block';
@@ -29,10 +31,26 @@ makePledgeBtnElement.forEach(button => {
 closeModal.addEventListener('click', () => { modalBackground.style.display = 'none'; });
 
 window.addEventListener('click', (clicking) => {
-    if (clicking.target === modalBackground) {
+    if (clicking.target === modalBackground || clicking.target === successElement) {
         modalBackground.style.display = 'none';
+        successElement.style.display = 'none';
     }
 })
+
+let bambooItemsLeft = 101;
+let blackEditionItemsLeft = 64;
+
+document.querySelectorAll('.items-left-bammboo').forEach(element => element.textContent = bambooItemsLeft)
+document.querySelectorAll('.back-edition-left').forEach(element => element.textContent = blackEditionItemsLeft)
+
+// find out why factory function isnt working
+function subtractItemsLeft(input) {
+    if (input === 1) {
+        return bambooItemsLeft--;
+    } else if (input === 2) {
+        return blackEditionItemsLeft--;
+    }
+}
 
 wrapper.addEventListener('click', calculateDonations);
 let donationsMade = [];
@@ -43,6 +61,10 @@ function calculateDonations(event) {
         return;
     }
     const targetInput = el.dataset.input;
+
+    // find out why factory function isnt working
+    subtractItemsLeft(targetInput);
+
     const inputElement = document.querySelector(`input[data-input="${targetInput}"]`);
     const inputValue = parseFloat(inputElement.value) || 0;
 
@@ -52,6 +74,7 @@ function calculateDonations(event) {
     const donationsTotal = donationsMade.reduce((a, b) => a += b);
     pledgedAmount.textContent = `$${donationsTotal}`;
     peopleDonated.textContent = donationsMade.length;
+    successModal();
 
     return donationsTotal;
 }
@@ -60,7 +83,6 @@ countDownFunction()
 function countDownFunction() {
     const countDownDate = new Date("May 31, 2021 00:00:00");
 
-    // updat countdown every second 
     const updateTime = setInterval(() => {
         const start = new Date().getTime();
         const distance = countDownDate - start;
@@ -74,6 +96,18 @@ function countDownFunction() {
         }
     }, 1000);
 }
+
+function successModal() {
+    successElement.style.display = 'block';
+}
+closeSuccess.addEventListener('click', () => {
+    successElement.style.display = 'none';
+});
+
+
+
+
+
 // function selectedEdition() {
 //     modalBackground.style.display = 'block';
     // const activeStatus = document.querySelectorAll('.active');
@@ -91,19 +125,3 @@ function countDownFunction() {
     // });
 
 // }
-
-/// success message after pledge
-/// make forEach loop on the closeModalFunction
-    // to cover both success and pledge modals
-// const closeModal = document.querySelector('.close-btn');
-// const closeModalTwo = document.querySelector('.close-btn-two');
-// const successElement = document.querySelector('.pledge-successful');
-// const modalBackgroundTwo = document.querySelector('.pledge-successful');
-
-// function closeModalFunction() {
-//     modalBackground.style.display = 'none';
-//     modalBackgroundTwo.style.display = 'none';
-// }
-
-// closeModal.addEventListener('click', closeModalFunction);
-// closeModalTwo.addEventListener('click', closeModalFunction);
