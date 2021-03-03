@@ -108,7 +108,7 @@ buttton:active { background-color: hsl(176, 72%, 28%); }
     background-color: hsl(0, 9%, 86%);
     margin: 2em auto;
     border-radius: 5px;
-    position: relative;
+    /* position: relative; */
 }
 .main .progress-bar .progress-value {
     width: 60%;

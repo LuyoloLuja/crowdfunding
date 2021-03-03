@@ -16,6 +16,8 @@ const successElement = document.querySelector('.pledge-successful');
 const closeSuccess = document.querySelectorAll('.close');
 
 openNav.addEventListener('click', () => { 
+    // document.querySelector('.progress-bar').style.position = 'unset';
+    container.style.position = 'unset';
     displayNav.style.display = 'block';
     openNav.style.display = 'none';
     closeNav.style.display = 'block';
