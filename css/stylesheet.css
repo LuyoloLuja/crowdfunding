@@ -130,7 +130,6 @@ buttton:active { background-color: hsl(176, 72%, 28%); }
 .about > div a {
     color: hsl(176, 50%, 47%);
     text-decoration: none;
-    /* font-weight: bolder; */
 }
 .about .stand-layout {
     display: flex;
@@ -194,11 +193,7 @@ buttton:active { background-color: hsl(176, 72%, 28%); }
     margin: 2em 0;
     cursor: pointer;
 }
-.selected-edition-style {
-    border: 2px solid hsl(176, 50%, 47%);
-}
 .modal .active {
-    /* display: none; */
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;

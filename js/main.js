@@ -21,6 +21,7 @@ openNav.addEventListener('click', () => {
     closeNav.style.display = 'block';
 })
 closeNav.addEventListener('click', () => {
+    container.style.position = 'absolute';
     displayNav.style.display = 'none';
     openNav.style.display = 'block';
     closeNav.style.display = 'none';
