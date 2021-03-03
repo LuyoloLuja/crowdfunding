@@ -6,6 +6,7 @@ const countDownElement = document.querySelector('.count-down');
 const makePledgeBtnElement = document.querySelectorAll('.make-pledge');
 const modalBackground = document.querySelector('.bg-modal');
 const closeModal = document.querySelector('.close');
+const container = document.querySelector('.container');
 
 const openNav = document.querySelector('.burger');
 const closeNav = document.querySelector('.closeNav');
@@ -26,14 +27,21 @@ closeNav.addEventListener('click', () => {
 })
 
 makePledgeBtnElement.forEach(button => {
-    button.addEventListener('click', () => { modalBackground.style.display = 'block'; });
+    button.addEventListener('click', () => { 
+        modalBackground.style.display = 'block';
+        container.style.position = 'fixed';
+     });
 })
-closeModal.addEventListener('click', () => { modalBackground.style.display = 'none'; });
+closeModal.addEventListener('click', () => { 
+    modalBackground.style.display = 'none';
+    container.style.position = 'absolute';
+});
 
 window.addEventListener('click', (clicking) => {
     if (clicking.target === modalBackground || clicking.target === successElement) {
         modalBackground.style.display = 'none';
         successElement.style.display = 'none';
+        container.style.position = 'absolute';
     }
 })
 
@@ -103,44 +111,9 @@ function countDownFunction() {
 
 function successModal() {
     successElement.style.display = 'block';
+    container.style.position = 'fixed';
+    modalBackground.style.position = 'fixed';
 }
 closeSuccess.forEach(button => button.addEventListener('click', () => {
     successElement.style.display = 'none';
 }))
-
-// progressBar()
-// function progressBar(){
-//     const progressElement = document.querySelector('.progress-value');
-
-//     let width = donationsMade.length;
-//     console.log(width);
-//     const identity = setInterval(scene , countDownFunction());
-//     // console.log(identity);
-//     function scene(){
-//         if (width > 100000) {
-//             clearInterval(identity);
-//         } else {
-//             width++;
-//             progressElement.style.width = width;
-//         }
-//     }
-// }
-
-
-// function selectedEdition() {
-//     modalBackground.style.display = 'block';
-    // const activeStatus = document.querySelectorAll('.active');
-    // bambooActiveStatus.classList.add('active');
-
-    // const bambooEdition = document.querySelector('.bamboo-stand');
-    // const bambooActiveStatus = document.querySelector('.pledgeTwo');
-    // bambooEdition.classList.add('.selected-edition-style');
-    // bambooEdition.forEach(edition => {
-    //     edition.classList.add('.selected-edition-style');
-
-    //     activeStatus.forEach(status => {
-    //         status.style.display = 'block';
-    //     })
-    // });
-
-// }
