@@ -37,18 +37,20 @@ window.addEventListener('click', (clicking) => {
     }
 })
 
-let bambooItemsLeft = 101;
-let blackEditionItemsLeft = 64;
-
-document.querySelectorAll('.items-left-bammboo').forEach(element => element.textContent = bambooItemsLeft)
-document.querySelectorAll('.back-edition-left').forEach(element => element.textContent = blackEditionItemsLeft)
-
+let bambooItemsLeft = { value: 101 };
+let blackEditionItemsLeft = { value: 64 };
+document.querySelectorAll('.items-left-bammboo').forEach(element => element.textContent = bambooItemsLeft.value);
+document.querySelectorAll('.back-edition-left').forEach(element => element.textContent = blackEditionItemsLeft.value);
 // find out why factory function isnt working
 function subtractItemsLeft(input) {
-    if (input === 1) {
-        return bambooItemsLeft--;
-    } else if (input === 2) {
-        return blackEditionItemsLeft--;
+    if (input === '1') {
+        console.log('One');
+        let subtractBamboo = bambooItemsLeft.value;
+        console.log(subtractBamboo--);
+        return subtractBamboo;
+    } else if (input === '2') {
+        console.log('Two');
+        return blackEditionItemsLeft.value--;
     }
 }
 
@@ -62,9 +64,7 @@ function calculateDonations(event) {
         return;
     }
 
-    const targetInput = el.dataset.input;
-
-    // console.log(targetInput);
+    let targetInput = el.dataset.input;
 
     const inputElement = document.querySelector(`input[data-input="${targetInput}"]`);
     const inputValue = parseFloat(inputElement.value) || 0;
@@ -76,6 +76,7 @@ function calculateDonations(event) {
     pledgedAmount.textContent = `$${donationsTotal}`;
     peopleDonated.textContent = donationsMade.length;
     successModal();
+
     // find out why factory function isnt working
     subtractItemsLeft(targetInput);
 
@@ -106,3 +107,40 @@ function successModal() {
 closeSuccess.forEach(button => button.addEventListener('click', () => {
     successElement.style.display = 'none';
 }))
+
+// progressBar()
+// function progressBar(){
+//     const progressElement = document.querySelector('.progress-value');
+
+//     let width = donationsMade.length;
+//     console.log(width);
+//     const identity = setInterval(scene , countDownFunction());
+//     // console.log(identity);
+//     function scene(){
+//         if (width > 100000) {
+//             clearInterval(identity);
+//         } else {
+//             width++;
+//             progressElement.style.width = width;
+//         }
+//     }
+// }
+
+
+// function selectedEdition() {
+//     modalBackground.style.display = 'block';
+    // const activeStatus = document.querySelectorAll('.active');
+    // bambooActiveStatus.classList.add('active');
+
+    // const bambooEdition = document.querySelector('.bamboo-stand');
+    // const bambooActiveStatus = document.querySelector('.pledgeTwo');
+    // bambooEdition.classList.add('.selected-edition-style');
+    // bambooEdition.forEach(edition => {
+    //     edition.classList.add('.selected-edition-style');
+
+    //     activeStatus.forEach(status => {
+    //         status.style.display = 'block';
+    //     })
+    // });
+
+// }
