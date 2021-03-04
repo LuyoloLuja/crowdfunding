@@ -15,7 +15,7 @@ const displayNav = document.querySelector('.display-none');
 const successElement = document.querySelector('.pledge-successful');
 const closeSuccess = document.querySelectorAll('.close');
 
-openNav.addEventListener('click', () => { 
+openNav.addEventListener('click', () => {
     // document.querySelector('.progress-bar').style.position = 'unset';
     container.style.position = 'unset';
     displayNav.style.display = 'block';
@@ -28,14 +28,20 @@ closeNav.addEventListener('click', () => {
     openNav.style.display = 'block';
     closeNav.style.display = 'none';
 })
+document.querySelectorAll('li').forEach(li => {
+    li.addEventListener('click', () => {
+        container.style.position = 'absolute';
+        // displayNav.style.display = 'none';
+    })
+})
 
 makePledgeBtnElement.forEach(button => {
-    button.addEventListener('click', () => { 
+    button.addEventListener('click', () => {
         modalBackground.style.display = 'block';
         container.style.position = 'fixed';
-     });
+    });
 })
-closeModal.addEventListener('click', () => { 
+closeModal.addEventListener('click', () => {
     modalBackground.style.display = 'none';
     container.style.position = 'absolute';
 });
@@ -52,6 +58,7 @@ let bambooItemsLeft = { value: 101 };
 let blackEditionItemsLeft = { value: 64 };
 document.querySelectorAll('.items-left-bammboo').forEach(element => element.textContent = bambooItemsLeft.value);
 document.querySelectorAll('.back-edition-left').forEach(element => element.textContent = blackEditionItemsLeft.value);
+
 // find out why factory function isnt working
 function subtractItemsLeft(input) {
     if (input === '1') {
@@ -70,7 +77,7 @@ let donationsMade = [];
 function calculateDonations(event) {
 
     const el = event.target;
-    
+
     if (el.nodeName !== 'BUTTON' || !el.classList.contains('submitBtn')) {
         return;
     }
@@ -102,7 +109,7 @@ function countDownFunction() {
         const start = new Date().getTime();
         const distance = countDownDate - start;
         const daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-        
+
         countDownElement.textContent = daysLeft;
 
         if (distance < 0) {
