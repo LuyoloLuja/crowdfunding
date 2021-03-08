@@ -23,17 +23,21 @@
     header ul {
         display: block;
         width: 90%;
-        height: 70%;
+        height: fit-content;
         background-color: #fff;
         border-radius: 10px;
         position: absolute;
         left: 5%;
         right: 5%;
         top: 7em;
-        padding: 5%;
     }
     header ul li {
-        padding: 5%;
+        padding: 2em;
+        font-weight: bold;
+        border-bottom: 1px solid #D3D3D3;
+    }
+    header ul :nth-child(3){
+        border-bottom: none;
     }
     header ul li a {
         color: #000;
