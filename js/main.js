@@ -44,6 +44,7 @@ makePledgeBtnElement.forEach(button => {
 closeModal.addEventListener('click', () => {
     modalBackground.style.display = 'none';
     container.style.position = 'absolute';
+    scrollToTop();
 });
 
 window.addEventListener('click', (clicking) => {
@@ -51,24 +52,25 @@ window.addEventListener('click', (clicking) => {
         modalBackground.style.display = 'none';
         successElement.style.display = 'none';
         container.style.position = 'absolute';
+        scrollToTop();
     }
 })
+const firstItems = document.querySelectorAll('.items-left-bammboo');
+const secondItems = document.querySelectorAll('.back-edition-left');
 
-let bambooItemsLeft = { value: 101 };
-let blackEditionItemsLeft = { value: 64 };
-document.querySelectorAll('.items-left-bammboo').forEach(element => element.textContent = bambooItemsLeft.value);
-document.querySelectorAll('.back-edition-left').forEach(element => element.textContent = blackEditionItemsLeft.value);
+let itemsLeftOne = { value: 101 };
+let itemsLeftTwo = { value: 64 };
 
+firstItems.forEach(element => element.textContent = itemsLeftOne.value);
+secondItems.forEach(element => element.textContent = itemsLeftTwo.value);
 // find out why factory function isnt working
 function subtractItemsLeft(input) {
     if (input === '1') {
         console.log('One');
-        let subtractBamboo = bambooItemsLeft.value;
-        console.log(subtractBamboo--);
-        return subtractBamboo;
+        return itemsLeftOne.value -= 1;
     } else if (input === '2') {
         console.log('Two');
-        return blackEditionItemsLeft.value--;
+        return itemsLeftTwo.value -= 1;
     }
 }
 
@@ -122,8 +124,16 @@ function countDownFunction() {
 function successModal() {
     successElement.style.display = 'block';
     container.style.position = 'fixed';
-    modalBackground.style.position = 'fixed';
+    // modalBackground.style.position = 'fixed';
+    scrollToTop();
 }
 closeSuccess.forEach(button => button.addEventListener('click', () => {
     successElement.style.display = 'none';
 }))
+// scroll to top of page
+function scrollToTop(){
+    window.scroll({
+        top: 0, 
+        behavior: 'smooth'
+    });
+}
