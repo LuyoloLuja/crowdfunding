@@ -1,3 +1,9 @@
+/*
+    TO-DO
+        bookmark to toggle
+        pledge selection --- radio buttons
+        fix the decrement items left function
+*/
 const wrapper = document.getElementById('wrapper');
 const peopleDonated = document.querySelector('.number-of-backers');
 const pledgedAmount = document.querySelector('.backed-users');
