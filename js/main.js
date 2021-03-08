@@ -39,6 +39,7 @@ makePledgeBtnElement.forEach(button => {
     button.addEventListener('click', () => {
         modalBackground.style.display = 'block';
         container.style.position = 'fixed';
+        scrollToTop();
     });
 })
 closeModal.addEventListener('click', () => {
@@ -58,19 +59,22 @@ window.addEventListener('click', (clicking) => {
 const firstItems = document.querySelectorAll('.items-left-bammboo');
 const secondItems = document.querySelectorAll('.back-edition-left');
 
-let itemsLeftOne = { value: 101 };
-let itemsLeftTwo = { value: 64 };
+let itemsLeftOne = 101;
+let itemsLeftTwo = 64;
 
-firstItems.forEach(element => element.textContent = itemsLeftOne.value);
-secondItems.forEach(element => element.textContent = itemsLeftTwo.value);
+firstItems.forEach(element => element.textContent = itemsLeftOne);
+secondItems.forEach(element => element.textContent = itemsLeftTwo);
 // find out why factory function isnt working
 function subtractItemsLeft(input) {
+    itemsLeftOne = parseInt(itemsLeftOne);
+    itemsLeftTwo = parseInt(itemsLeftTwo);
+
     if (input === '1') {
         console.log('One');
-        return itemsLeftOne.value -= 1;
+        return itemsLeftOne -= 1;
     } else if (input === '2') {
         console.log('Two');
-        return itemsLeftTwo.value -= 1;
+        return itemsLeftTwo -= 1;
     }
 }
 
