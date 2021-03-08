@@ -2,6 +2,8 @@ const wrapper = document.getElementById('wrapper');
 const peopleDonated = document.querySelector('.number-of-backers');
 const pledgedAmount = document.querySelector('.backed-users');
 const countDownElement = document.querySelector('.count-down');
+const firstItems = document.querySelectorAll('.items-left-bammboo');
+const secondItems = document.querySelectorAll('.back-edition-left');
 
 const makePledgeBtnElement = document.querySelectorAll('.make-pledge');
 const modalBackground = document.querySelector('.bg-modal');
@@ -56,8 +58,6 @@ window.addEventListener('click', (clicking) => {
         scrollToTop();
     }
 })
-const firstItems = document.querySelectorAll('.items-left-bammboo');
-const secondItems = document.querySelectorAll('.back-edition-left');
 
 let itemsLeftOne = 101;
 let itemsLeftTwo = 64;
