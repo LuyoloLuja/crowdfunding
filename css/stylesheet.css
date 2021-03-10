@@ -91,6 +91,9 @@ buttton:active { background-color: hsl(176, 72%, 28%); }
     text-decoration: none;
     border-radius: 50px;
 }
+.bookmarked {
+    box-shadow: 5px 5px 10px #888888;
+}
 .main .bookmarkButtons a span {
     width: fit-content;
     display: inline-block;

@@ -5,6 +5,9 @@ const countDownElement = document.querySelector('.count-down');
 const firstItems = document.querySelectorAll('.items-left-bammboo');
 const secondItems = document.querySelectorAll('.back-edition-left');
 
+const bookmarkLink = document.querySelector('.makeBookmark');
+const bookmarkText = document.querySelector('.bookmarkText');
+
 const makePledgeBtnElement = document.querySelectorAll('.make-pledge');
 const modalBackground = document.querySelector('.bg-modal');
 const closeModal = document.querySelector('.close');
@@ -24,6 +27,20 @@ const displayNav = document.querySelector('.display-none');
 
 const successElement = document.querySelector('.pledge-successful');
 const closeSuccess = document.querySelectorAll('.close');
+
+function doBookmark(e) {
+    e.preventDefault();
+
+    if (bookmarkLink.classList.contains('bookmarked')) {
+        bookmarkLink.classList.remove('bookmarked');
+        bookmarkText.innerText = 'Bookmark';
+    } else {
+        bookmarkLink.classList.add('bookmarked');
+        bookmarkText.innerText = 'Bookmarked';
+    }
+
+}
+bookmarkLink.addEventListener('click', doBookmark);
 
 openNav.addEventListener('click', () => {
     // document.querySelector('.progress-bar').style.position = 'unset';
