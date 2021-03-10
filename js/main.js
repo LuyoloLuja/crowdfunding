@@ -1,9 +1,3 @@
-/*
-    TO-DO
-        bookmark to toggle
-        pledge selection --- radio buttons
-        fix the decrement items left function
-*/
 const wrapper = document.getElementById('wrapper');
 const peopleDonated = document.querySelector('.number-of-backers');
 const pledgedAmount = document.querySelector('.backed-users');
@@ -15,6 +9,14 @@ const makePledgeBtnElement = document.querySelectorAll('.make-pledge');
 const modalBackground = document.querySelector('.bg-modal');
 const closeModal = document.querySelector('.close');
 const container = document.querySelector('.container');
+
+const submitBtn = document.querySelector('.submitBtn');
+const freePledge = document.querySelector('.freePledge');
+const freeEditionContainer = document.querySelector('.free-edition');
+const bambooInput = document.querySelector('.bambooInput');
+const bammbooButtonsContainer = document.querySelector('.pledge-bamboo');
+const blackInput = document.querySelector('.blackInput');
+const blackButtonsContainer = document.querySelector('.pledge-black');
 
 const openNav = document.querySelector('.burger');
 const closeNav = document.querySelector('.closeNav');
@@ -45,12 +47,21 @@ document.querySelectorAll('li').forEach(li => {
 
 makePledgeBtnElement.forEach(button => {
     button.addEventListener('click', () => {
+        if (button.classList.contains('bamboo')) {
+            displayBambooEdtion();
+        } else if (button.classList.contains('black')) {
+            displayBlackEdtion();
+        }
+
         modalBackground.style.display = 'block';
         container.style.position = 'fixed';
         scrollToTop();
     });
 })
 closeModal.addEventListener('click', () => {
+    bammbooButtonsContainer.style.display = 'none';
+    submitBtn.style.display = 'none';
+    blackButtonsContainer.style.display = 'none';
     modalBackground.style.display = 'none';
     container.style.position = 'absolute';
     scrollToTop();
@@ -61,6 +72,10 @@ window.addEventListener('click', (clicking) => {
         modalBackground.style.display = 'none';
         successElement.style.display = 'none';
         container.style.position = 'absolute';
+
+        bammbooButtonsContainer.style.display = 'none';
+        submitBtn.style.display = 'none';
+        blackButtonsContainer.style.display = 'none';
         scrollToTop();
     }
 })
@@ -84,8 +99,16 @@ function subtractItemsLeft(input) {
     }
 }
 
-wrapper.addEventListener('click', calculateDonations);
 let donationsMade = [];
+let pledgedWithNoAmount = 1;
+
+document.querySelector('.makeFreePledge').addEventListener('click', () => {
+    donationsMade.push(pledgedWithNoAmount);
+    peopleDonated.textContent = donationsMade.length;
+    successModal();
+})
+
+wrapper.addEventListener('click', calculateDonations);
 function calculateDonations(event) {
 
     const el = event.target;
@@ -97,6 +120,7 @@ function calculateDonations(event) {
     let targetInput = el.dataset.input;
 
     const inputElement = document.querySelector(`input[data-input="${targetInput}"]`);
+    // console.log(inputElement);
     const inputValue = parseFloat(inputElement.value) || 0;
 
     if (inputValue < 25 || inputValue === '') return alert('Pledge must be at least $25.');
@@ -141,9 +165,33 @@ closeSuccess.forEach(button => button.addEventListener('click', () => {
     successElement.style.display = 'none';
 }))
 // scroll to top of page
-function scrollToTop(){
+function scrollToTop() {
     window.scroll({
-        top: 0, 
+        top: 0,
         behavior: 'smooth'
     });
 }
+
+function displayFreeEdition() {
+    submitBtn.style.display = 'block';
+    freeEditionContainer.classList.add('blueBorder');
+    bammbooButtonsContainer.style.display = 'none';
+    blackButtonsContainer.style.display = 'none';
+}
+freePledge.addEventListener('click', displayFreeEdition)
+
+
+function displayBambooEdtion() {
+    bammbooButtonsContainer.style.display = 'flex';
+    submitBtn.style.display = 'none';
+    blackButtonsContainer.style.display = 'none';
+}
+bambooInput.addEventListener('click', displayBambooEdtion)
+
+
+function displayBlackEdtion() {
+    blackButtonsContainer.style.display = 'flex';
+    bammbooButtonsContainer.style.display = 'none';
+    submitBtn.style.display = 'none';
+}
+blackInput.addEventListener('click', displayBlackEdtion)
