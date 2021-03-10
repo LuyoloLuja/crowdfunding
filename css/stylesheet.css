@@ -184,32 +184,48 @@ buttton:active { background-color: hsl(176, 72%, 28%); }
 }
 .modal p { color: hsl(0, 2%, 37%); margin: 1em 0; }
 .modal h2 { font-size: 18px; }
-.modal > div {
+#wrapper > div {
     position: relative;
     border: 1px solid hsl(0, 5%, 80%);
     border-radius: 10px;
     padding: 2em 3em;
     margin: 2em 0;
-    cursor: pointer;
-}
-.modal .active {
-    width: 0.5em;
-    height: 0.5em;
-    border-radius: 50%;
-    background-color: hsl(176, 50%, 47%);
-    position: absolute;
-    left: 1em;
 }
 .modal .pledge > div {
     display: flex;
     justify-content: flex-end;
+    width: 100%;
+    width: 100%;
 }
+.pledge-no-amount button {
+    /* should display it block on javascript */
+    display: none;
+    padding: 1em;
+    background-color: hsl(176, 72%, 28%);
+    color: #fff;
+    margin: 0 0 0 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+}
+.modal .pledge-edition input { margin-left: 1em; }
 .modal .pledge > div a {
-    color: hsl(176, 50%, 47%);
+    color: hsl(176, 72%, 28%);
     text-decoration: none;
 }
-.modal .pledge-amount {
-    display: flex;
+.blueBorder {
+    border: 2px solid hsl(176, 72%, 28%);
+}
+.modal .pledge-bamboo {
+    /* should displai it flex on javascript */
+    display: none;
+    justify-content: flex-end;
+}
+.modal .pledge-black {
+    /* should displai it flex on javascript */
+    display: none;
     justify-content: flex-end;
 }
 .modal .pledge-amount :nth-child(1){
@@ -226,8 +242,8 @@ buttton:active { background-color: hsl(176, 72%, 28%); }
     outline: none;
     cursor: pointer;
 }
-.modal .pledge-amount button { background-color: hsl(176, 50%, 47%); color: #fff; }
-.modal .pledge-amount input { border: 1.5px solid hsl(176, 50%, 47%); color: #000; }
+.modal .pledge-amount button { background-color: hsl(176, 72%, 28%); color: #fff; }
+.modal .pledge-amount input { border: 1.5px solid hsl(176, 72%, 28%); color: #000; }
 .modal .pledge > div h2 { display: inline-block; }
 .modal .pledge > div div { display: inline-block; }
 

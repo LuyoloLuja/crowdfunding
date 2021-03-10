@@ -82,9 +82,9 @@
         padding: 1em 2em;
         margin: 1em 0;
     }
-    .modal .pledge > div,
-    .modal .pledge-amount,
-    .modal .pledge > div a { display: block; }
+    .modal .pledge > div { display: block; }
+    .modal .pledge-amount, /* should display block in javascript  */
+    .modal .pledge > div a { display: none; }
     .modal .pledge > div :nth-child(1){ margin: 2px 0; }
     .modal .pledge > div :nth-child(2){ padding: 2px 0; }
     .modal .pledge > div :nth-child(3){ padding: 2px 0; }
