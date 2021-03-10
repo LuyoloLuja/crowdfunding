@@ -37,6 +37,7 @@ function doBookmark(e) {
     } else {
         bookmarkLink.classList.add('bookmarked');
         bookmarkText.innerText = 'Bookmarked';
+        bookmarkText.style.color = 'hsl(176, 50%, 47%)'
     }
 
 }
@@ -204,7 +205,6 @@ function displayBambooEdtion() {
     blackButtonsContainer.style.display = 'none';
 }
 bambooInput.addEventListener('click', displayBambooEdtion)
-
 
 function displayBlackEdtion() {
     blackButtonsContainer.style.display = 'flex';

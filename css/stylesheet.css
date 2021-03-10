@@ -198,7 +198,6 @@ buttton:active { background-color: hsl(176, 72%, 28%); }
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    width: 100%;
 }
 .pledge-no-amount button {
     /* should display it block on javascript */

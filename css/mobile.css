@@ -78,17 +78,14 @@
         padding: 1.5em;
         margin: 8em auto;
     }
-    .modal > div {
+    #wrapper > div {
         padding: 1em 2em;
         margin: 1em 0;
     }
+
     .modal .pledge > div { display: block; }
-    .modal .pledge-amount, /* should display block in javascript  */
-    .modal .pledge > div a { display: none; }
-    .modal .pledge > div :nth-child(1){ margin: 2px 0; }
-    .modal .pledge > div :nth-child(2){ padding: 2px 0; }
-    .modal .pledge > div :nth-child(3){ padding: 2px 0; }
-    .modal .pledge > div :nth-child(4){ padding: 2px 0; }
+    .modal .pledge > div a { display: block; }
+    .pledge-amount p { display: none; }
 
     .success-message {
         width: 90%;
